@@ -1,0 +1,49 @@
+{
+  "name": "offline-ranger",
+  "version": "0.1.0",
+  "description": "A React hook that keeps your Supabase-backed app usable offline: queues writes, syncs automatically when the connection returns.",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --format esm,cjs --dts",
+    "test": "vitest run",
+    "lint": "tsc --noEmit"
+  },
+  "keywords": [
+    "supabase",
+    "offline",
+    "react",
+    "hook",
+    "pwa",
+    "sync"
+  ],
+  "license": "MIT",
+  "peerDependencies": {
+    "react": ">=17.0.0",
+    "@supabase/supabase-js": ">=2.0.0"
+  },
+  "dependencies": {
+    "idb": "^8.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.0",
+    "tsup": "^8.0.0",
+    "vitest": "^1.4.0",
+    "fake-indexeddb": "^5.0.2",
+    "@types/react": "^18.2.0",
+    "react": "^18.2.0",
+    "@supabase/supabase-js": "^2.43.0"
+  }
+}
